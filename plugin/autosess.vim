@@ -101,8 +101,9 @@ endfunction
 
 function s:FailIfSwapExists()
 	if exists('s:swapname')
-		echoerr 'Swap file "'.s:swapname.'" already exists!' 'Autosess: failed to restore session, exiting.'
-		qa!
+        echomsg 'Swap file "'.s:swapname.'" already exists!'
+		"echoerr 'Swap file "'.s:swapname.'" already exists!' 'Autosess: failed to restore session, exiting.'
+		"qa!
 	endif
 endfunction
 
